@@ -6,6 +6,14 @@
     <title><%= title %></title>
 </head>
 <body style="background-color: black; color: white;">
-    This is creating Post page
+    <form action="/" method="POST">
+        <label for="">username: 
+            <input type="text" name="username" placeholder="Username">
+        </label> <br> <br>
+        <label for="post-id">Post Content:
+            <textarea name="post" rows="" cols="30" id="post-id" placeholder="Write the content of the post"></textarea>
+        </label> <br> <br>
+        <button type="submit">Post</button>
+    </form>
 </body>
 </html>
