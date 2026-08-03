@@ -8,6 +8,21 @@
      
 </head>
 <body style="background-color: black; color: white;">
+    <%- include('../partials/header.ejs') %>
     <h1>This is Home page on which feed would be shown</h1>
+    <%allBlogs.map((blog) => { %>
+        <div style="background-color: gainsboro; color: black; border: 1px solid black; border-radius: 10px; padding: 10px;">
+            <div style="display: flex; justify-content: space-between;">
+                <span style="font: 32px bold;"><%= blog.username%></span>
+                <span>
+                    <form action="/">
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </form>
+                </span>
+            </div>
+                <p><%= blog.post%></p>
+        </div>
+    <%})%>
 </body>
 </html>
