@@ -6,7 +6,8 @@ const getBlogs = async (req, res) => {
   console.log("all blogs: ", blogs);
 
   console.log("getBlogs: ", req.url);
-  res.render("home", { title: "home page", "allBlogs": blogs });
+  // res.render("home", { title: "home page", "allBlogs": blogs });
+  res.status(200).json({message: "success", title: "home page", allBlogs: blogs})
 };
 
 const blogForm = (req, res) => {
