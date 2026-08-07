@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { getBlogs, blogForm, createBlog } = require('../controllers/blogsController');
 
-router.get('/', getBlogs)
+router.get('/blogs', getBlogs)
 router.get('/create-post', blogForm)
 router.post('/', createBlog);
 
