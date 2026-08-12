@@ -11,7 +11,6 @@ function Header() {
             BlogSpace
           </h2>
         </Link>
-
         <nav className="flex gap-4">
           <Link
             to="/"
