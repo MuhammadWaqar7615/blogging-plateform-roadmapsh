@@ -69,7 +69,6 @@ function Home() {
                 key={blog._id}
                 className="relative bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300"
               >
-                {/* Edit & Delete Buttons */}
                 <div className="absolute top-4 right-4 flex gap-2">
                   <button
                     onClick={() => handleEdit(blog)}
