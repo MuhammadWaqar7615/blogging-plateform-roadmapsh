@@ -87,7 +87,6 @@ function Home() {
                 </div>
 
                 <div className="p-6">
-                  {/* User */}
                   <div className="flex items-center gap-4 mb-5 pr-32">
                     <div className="w-12 h-12 rounded-full bg-indigo-600 flex items-center justify-center text-lg font-bold text-white">
                       {blog?.username?.charAt(0)?.toUpperCase()}
