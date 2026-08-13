@@ -52,7 +52,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Blog Section */}
       <div className="max-w-6xl mx-auto px-6 py-10">
         <h2 className="text-3xl font-bold text-gray-800 mb-8">
           Latest Blogs
