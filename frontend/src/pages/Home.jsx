@@ -25,7 +25,6 @@ function Home() {
     getData();
   }, []);
 
-  // Frontend-only handlers
   const handleEdit = (blog) => {
     console.log("Edit blog:", blog);
     alert(`Edit: ${blog.post}`);
