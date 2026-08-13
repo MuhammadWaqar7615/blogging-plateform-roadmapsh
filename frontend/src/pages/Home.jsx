@@ -100,7 +100,6 @@ function Home() {
                     </div>
                   </div>
 
-                  {/* Blog */}
                   <p className="text-gray-600 leading-7 whitespace-pre-wrap break-words">
                     {blog.post}
                   </p>
