@@ -10,7 +10,6 @@ function Home() {
 
       try {
         const response = await fetch(`${URL}/blogs`);
-
         if (!response.ok) {
           throw new Error("Failed to fetch blogs");
         }
