@@ -13,7 +13,7 @@ function Home() {
         if (!response.ok) {
           throw new Error("Failed to fetch blogs");
         }
-        
+
         const result = await response.json();
         setAllBlogs(result.allBlogs);
       } catch (error) {
@@ -29,9 +29,21 @@ function Home() {
     alert(`Edit: ${blog.post}`);
   };
 
-  const handleDelete = (blogId) => {
+  const handleDelete = async (blogId) => {
     console.log("Delete blog:", blogId);
     alert(`Delete blog: ${blogId}`);
+    try {
+      const response = await fetch(`${URL}/`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formValues),
+      });
+      console.log('api called for delete');
+    } catch (error) {
+      console.error("Error: ", error);
+    }
   };
 
   return (
@@ -40,9 +52,7 @@ function Home() {
 
       <section className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <h1 className="text-5xl font-bold mb-4">
-            Discover Amazing Stories
-          </h1>
+          <h1 className="text-5xl font-bold mb-4">Discover Amazing Stories</h1>
 
           <p className="text-lg text-gray-100 max-w-2xl">
             Read blogs from developers, writers, and creators around the world.
@@ -51,9 +61,7 @@ function Home() {
       </section>
 
       <div className="max-w-6xl mx-auto px-6 py-10">
-        <h2 className="text-3xl font-bold text-gray-800 mb-8">
-          Latest Blogs
-        </h2>
+        <h2 className="text-3xl font-bold text-gray-800 mb-8">Latest Blogs</h2>
 
         {allBlogs.length === 0 ? (
           <div className="text-center text-gray-500 text-lg mt-10">
