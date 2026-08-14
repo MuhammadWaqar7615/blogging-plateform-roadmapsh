@@ -7,13 +7,12 @@ function Home() {
   useEffect(() => {
     const getData = async () => {
       const URL = import.meta.env.VITE_BASE_URL;
-
       try {
         const response = await fetch(`${URL}/blogs`);
         if (!response.ok) {
           throw new Error("Failed to fetch blogs");
         }
-        
+
         const result = await response.json();
         setAllBlogs(result.allBlogs);
       } catch (error) {
