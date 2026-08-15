@@ -42,7 +42,6 @@ function Home() {
       });
       console.log('api called for delete');
     } catch (error) {
-    
       console.error("Error: ", error);
     }
   };
