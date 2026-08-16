@@ -46,7 +46,6 @@ function CreateBlogs() {
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Username */}
           <div>
             <label
               htmlFor="username"
