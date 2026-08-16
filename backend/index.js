@@ -19,7 +19,7 @@ try {
 }
 
 app.use(express.json());
-app.use(cors());
+app.use(cors("*"));
 app.use('/', routes);
 app.listen(PORT, (req, res) => {
     console.log('server is listening at port: ', PORT);
