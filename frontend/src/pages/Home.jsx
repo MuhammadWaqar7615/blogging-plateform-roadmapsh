@@ -30,17 +30,20 @@ function Home() {
   };
 
   const handleDelete = async (blogId) => {
-    console.log("Delete blog:", blogId);
-    alert(`Delete blog: ${blogId}`);
+    const URL = import.meta.env.VITE_BASE_URL;
     try {
       const response = await fetch(`${URL}/`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formValues),
+        // body: JSON.st ringify(blogId),
+        // body: JSON.parse(blogId)
+        body: blogId,
       });
       console.log('api called for delete');
+      console.log("Delete blog:", blogId);
+      alert(`Delete blog: ${blogId}`);
     } catch (error) {
       console.error("Error: ", error);
     }
