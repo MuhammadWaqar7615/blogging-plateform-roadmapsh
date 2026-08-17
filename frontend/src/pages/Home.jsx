@@ -39,7 +39,7 @@ function Home() {
         },
         // body: JSON.st ringify(blogId),
         // body: JSON.parse(blogId)
-        body: blogId,
+        body: JSON.stringify({ blogId })
       });
       console.log('api called for delete');
       console.log("Delete blog:", blogId);
