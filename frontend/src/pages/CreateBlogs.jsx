@@ -63,7 +63,6 @@ function CreateBlogs() {
             />
           </div>
 
-          {/* Blog Content */}
           <div>
             <label
               htmlFor="post"
