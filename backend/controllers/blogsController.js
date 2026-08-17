@@ -27,7 +27,6 @@ const createBlog = async (req, res) => {
 };
 
 const deleteBlog = (req, res) => {
-  // console.log('request data: ', deleteData);
   console.log('this url is triggering', req.body);
 }
 
