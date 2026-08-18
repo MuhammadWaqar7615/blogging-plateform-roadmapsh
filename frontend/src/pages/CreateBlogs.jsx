@@ -16,7 +16,7 @@ function CreateBlogs() {
     console.log("env variable: ", `${URL}/`);
 
     try {
-      console.log("try catch triggered")
+      // console.log("try catch triggered")
       const response = await fetch(`${URL}/`, {
         method: "post",
         headers: {
