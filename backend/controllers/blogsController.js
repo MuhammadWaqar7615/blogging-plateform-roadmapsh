@@ -25,13 +25,24 @@ const createBlog = async (req, res) => {
   res.redirect(`/`);
 };
 
-const deleteBlog = (req, res) => {
-  console.log('this url is triggering', req.body);
+const deleteBlog = async (req, res) => {
+  console.log('this url is triggering', req.body.blogId);
+  const blogDelete = await Blogs.findByIdAndDelete(req.body.blogId);
+  res.status(204).send();
+}
+
+const updateBlog = async (req, res) => {
+  console.log("this url was triggered", req.body );
+  await Blogs.findByIdAndUpdate(req.body.blogId, { post: req.body.blogContent });
+  console.log('edited blog: ', Blogs.findById(req.body.blogId));
+  res.status(204).send();
 }
 
 module.exports = {
   getBlogs,
   blogForm,
   createBlog,
-  deleteBlog
+  deleteBlog,
+  updateBlog
 };
+
