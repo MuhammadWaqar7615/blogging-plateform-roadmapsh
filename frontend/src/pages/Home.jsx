@@ -179,7 +179,6 @@ function Home() {
 
                 {/* Footer */}
                 <div className="flex justify-end gap-3 rounded-b-xl border-t bg-gray-50 px-6 py-4">
-                  {/* Cancel button */}
                   <button
                     onClick={() => setPopup(!popup)}
                     type="button"
