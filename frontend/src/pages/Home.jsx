@@ -188,7 +188,6 @@ function Home() {
                     Cancel
                   </button>
 
-                  {/* OK button */}
                   <button
                     onClick={() => handleEdit(blog._id)}
                     type="button"
