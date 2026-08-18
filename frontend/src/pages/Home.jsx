@@ -173,7 +173,6 @@ function Home() {
 
                 {/* Content */}
                 <div className="px-6 py-8">
-                  {/* {blog.post} */}
                   <textarea ref={postRef} className="w-full h-full">{blog.post}</textarea>
                 </div>
 
