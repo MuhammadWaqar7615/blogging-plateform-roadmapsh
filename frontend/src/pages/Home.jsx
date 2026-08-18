@@ -177,7 +177,6 @@ function Home() {
                   <textarea ref={postRef} className="w-full h-full">{blog.post}</textarea>
                 </div>
 
-                {/* Footer */}
                 <div className="flex justify-end gap-3 rounded-b-xl border-t bg-gray-50 px-6 py-4">
                   <button
                     onClick={() => setPopup(!popup)}
