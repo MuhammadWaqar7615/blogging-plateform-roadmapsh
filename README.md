@@ -2,6 +2,10 @@
 
 A full-stack blogging platform built with a React + Vite frontend and an Express + MongoDB backend. The app lets users create blog posts, view all saved posts, edit existing posts, and delete posts.
 
+Project reference:
+
+- [https://roadmap.sh/projects/blogging-platform-api](https://roadmap.sh/projects/blogging-platform-api)
+
 ## Overview
 
 This project is split into two parts:
